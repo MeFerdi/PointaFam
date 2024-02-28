@@ -1,0 +1,52 @@
+---
+import heroImage from '../images/hero-image.jpg'; // Import the hero image
+---
+
+<section class="hero-banner">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Welcome to PointaFam</h1>
+      <p>Connecting farmers with urban retailers for a sustainable future</p>
+    </div>
+    <div class="hero-image">
+      <img src={heroImage} alt="Hero Image">
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-banner {
+    background-color: #f8f9fa; /* Adjust background color as needed */
+    padding: 100px 0; /* Adjust padding as needed */
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1200px; /* Adjust container width as needed */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse; /* Adjust flex direction as needed */
+  }
+
+  .hero-content {
+    max-width: 600px; /* Adjust content width as needed */
+    margin-bottom: 40px; /* Adjust margin as needed */
+  }
+
+  .hero-content h1 {
+    font-size: 36px; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+
+  .hero-content p {
+    font-size: 18px; /* Adjust font size as needed */
+    color: #777; /* Adjust text color as needed */
+  }
+
+  .hero-image img {
+    max-width: 100%; /* Ensure image stays within container */
+    height: auto; /* Maintain aspect ratio */
+  }
+</style>

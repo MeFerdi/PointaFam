@@ -1,0 +1,55 @@
+---
+import Card from './Card.astro'
+
+const featuresData = [
+  {title: 'Direct Trade Between Farmers and Retailers', body: ' PointaFam facilitates direct trade between farmers and urban retailers, ensuring fair prices for farmers and access to fresh produce for retailers.'},
+  {title: 'Efficient Marketplace', body: ' Our platform eliminates intermediaries, allowing farmers to list their produce and urban retailers to browse and purchase directly.'},
+  {title: 'User Authentication and Order Management', body: ' Secure user authentication system for farmers and retailers to create accounts, manage profiles, list products, place orders, and track purchases.'}
+];
+---
+
+<section class="features">
+  <div class="container">
+   {featuresData.map(feature => (
+      <Card>
+        <h3>{feature.title}</h3>
+        <p>{feature.body}</p>
+      </Card>
+    ))}
+  </div>
+</section>
+
+<style>
+  .features .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0 20px;
+    margin: 30px auto;
+  }
+
+  @media (max-width: 500px) {
+  .features .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Customize Card Component Styles */
+.card {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  font-size: 16px;
+}
+</style>

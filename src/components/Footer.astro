@@ -1,0 +1,58 @@
+<footer class="footer">
+  <div class="container">
+    <div>
+      <h3>PointaFam</h3>
+      <p>
+        Connect farmers with urban retailers, providing a platform for direct trade of fresh produce.
+      </p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #2E7D32; /* Update color to match PointaFam branding */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer a {
+    color: #FFC107; /* Update link color to match PointaFam branding */
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer h3 {
+    margin-bottom: 10px;
+  }
+
+  .footer div:nth-child(1) {
+    text-align: left;
+  }
+
+  /* Hide second div on small screens */
+  @media (max-width: 500px) {
+    .footer div:nth-child(2) {
+      display: none;
+    }
+  }
+</style>

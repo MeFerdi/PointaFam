@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+import logos from '../images/pngegg.png';
+import logosSmall from '../images/pngegg.png';
+---
+
+<Layout title="About PointaFam">
+  <section class="page-content">
+    <div class="container">
+      <h2>About PointaFam</h2>
+      <p>
+        PointaFam is a web-based platform that aims to revolutionize the way farmers connect with urban retailers. We provide a seamless and efficient marketplace where farmers can showcase their produce and urban retailers can easily source fresh and quality products directly from the farmers.
+      </p>
+
+      <p>
+        Our platform facilitates direct communication and transactions between farmers and retailers, eliminating intermediaries and ensuring fair prices for both parties. With PointaFam, farmers can reach a wider market and increase their visibility, while retailers gain access to a diverse range of locally-sourced products.
+      </p>
+
+      <Card dark={true}>
+        <h3>Our Mission</h3>
+        <p>
+         Empowering Communities, Enriching Lives: At PointaFam, we're committed to revolutionizing the agricultural landscape by bridging the gap between farmers and urban retailers. Our mission is to create a sustainable and inclusive marketplace where farmers can thrive, urban retailers can access fresh and quality produce, and communities can flourish through equitable access to locally-sourced goods. With a dedication to transparency, fairness, and environmental stewardship, we aim to transform the way food is sourced, distributed, and enjoyed, ultimately building stronger, healthier, and more resilient communities.
+        </p>
+      </Card>
+      
+      <h3>Our Partnerships</h3>
+      <img class="logos" src={logos} alt="Logos" />
+      <img class="logos-small" src={logosSmall} alt="Logos Small" />
+      <p>
+        We are proud to collaborate with various organizations and stakeholders in the agricultural and retail sectors to promote sustainable practices and support local communities. Our partnerships enable us to create a thriving ecosystem that benefits farmers, retailers, and consumers alike.
+      </p>
+
+      <h3>Join Us</h3>
+      <p>
+        Join us in our mission to transform the agricultural supply chain and empower farmers and retailers. Together, we can build a more resilient and equitable food system.
+      </p>
+
+      <ul>
+        <li>💬 Connect with us on social media!</li>
+        <li>💬 Learn more about our initiatives in the #community channel!</li>
+        <li>💬 Join our mailing list for updates and announcements!</li>
+      </ul>
+    </div>
+  </section>
+</Layout>

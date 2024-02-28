@@ -1,0 +1,64 @@
+---
+import logo from '../images/logo.svg'
+---
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <img src={logo} alt="PointaFam Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/farmers">Farmers</a></li>
+        <li><a href="/retailers">Retailers</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    height: 70px;
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .header .logo img {
+    height: 40px; /* Adjust height as needed */
+    vertical-align: middle;
+  }
+
+  .header nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header nav ul li {
+    padding: 0 15px;
+  }
+
+  .header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .header nav ul li a:hover {
+    text-decoration: underline;
+  }
+</style>

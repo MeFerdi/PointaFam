@@ -1,0 +1,64 @@
+---
+props: string
+  name: "string"
+  location: 
+  products: 
+  description: 
+  contactEmail: 
+  contactPhone: 
+  certifications: 
+  availability: 
+  priceRange: 
+  image: 
+---
+
+<section class="farmer-card">
+  <div class="farmer-card-img">
+    <img src={props.image} alt={props.name} />
+  </div>
+  <div class="farmer-card-info">
+    <h3>{props.name}</h3>
+    <p><strong>Location:</strong> {props.location}</p>
+    <p><strong>Products:</strong> {props.products}</p>
+    <p><strong>Description:</strong> {props.description}</p>
+    <p><strong>Contact Email:</strong> {props.contactEmail}</p>
+    <p><strong>Contact Phone:</strong> {props.contactPhone}</p>
+    <p><strong>Certifications:</strong> {props.certifications}</p>
+    <p><strong>Availability:</strong> {props.availability}</p>
+    <p><strong>Price Range:</strong> {props.priceRange}</p>
+  </div>
+</section>
+
+<style>
+  .farmer-card {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .farmer-card-img {
+    flex: 1;
+  }
+
+  .farmer-card-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .farmer-card-info {
+    flex: 2;
+    padding: 20px;
+  }
+
+  .farmer-card-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .farmer-card-info p {
+    margin-bottom: 5px;
+  }
+</style>

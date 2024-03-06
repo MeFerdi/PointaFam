@@ -1,0 +1,61 @@
+---
+import { Meta } from '@astro/components'
+---
+
+<div class="container">
+  <h1>Contact Us</h1>
+  
+  <!-- Contact Information -->
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p>Telephone: +254-XXXXXXX</p>
+    <p>Email: contact@example.com</p>
+    <p>Social Media:</p>
+    <ul>
+      <li><a href="https://twitter.com/example" target="_blank">Twitter</a></li>
+      <li><a href="https://facebook.com/example" target="_blank">Facebook</a></li>
+      <li><a href="https://instagram.com/example" target="_blank">Instagram</a></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .retailers {
+    padding: 20px;
+  }
+
+  .retailers h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .retailers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .retailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .retailer img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+  }
+
+  .retailer .details {
+    margin-top: 10px;
+  }
+
+  .retailer h3 {
+    margin-bottom: 5px;
+  }
+</style>

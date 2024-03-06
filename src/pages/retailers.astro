@@ -1,37 +1,39 @@
 ---
-const retailers = [
-  {
-    name: "Retailer 1",
-    location: "City A",
-    description: "Fruit vendor and sells also fresh vegetables.",
-    image: "/images/frame2-logo.jpg"
-  },
-  {
-    name: "Retailer 2",
-    location: "City B",
-    description: "A friendly customer.",
-    image: "/images/frame-logo.jpg"
-  },
-];
+import { Meta } from '@astro/components'
 ---
+<div class="container">
 
-<section class="retailers">
-  <div class="container">
-    <h2>Our Retailers</h2>
-    <div class="retailers-list">
-      {retailers.map(retailer => (
-        <div class="retailer">
-          <img src={retailer.image} alt={retailer.name} />
-          <div class="details">
-            <h3>{retailer.name}</h3>
-            <p>{retailer.location}</p>
-            <p>{retailer.description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+  <h1>Urban Marketplace - Retailers page</h1>
+  
+  <!-- Retailer Details -->
+  <div class="retailer">
+    <h2>Retailer 1</h2>
+    <p>Location: Nairobi, Kenya</p>
+    <p>Contacts: +254-XXXXXXX | retailer1@example.com</p>
+    <p>Type of Retailer: Fashion</p>
   </div>
-</section>
+
+  <div class="retailer">
+    <h2>Retailer 2</h2>
+    <p>Location: Nairobi, Kenya</p>
+    <p>Contacts: +254-XXXXXXX | retailer2@example.com</p>
+    <p>Type of Retailer: Electronics</p>
+  </div>
+
+  <div class="retailer">
+    <h2>Retailer 3</h2>
+    <p>Location: Nairobi, Kenya</p>
+    <p>Contacts: +254-XXXXXXX | retailer3@example.com</p>
+    <p>Type of Retailer: Food & Groceries</p>
+  </div>
+
+  <div class="retailer">
+    <h2>Retailer 4</h2>
+    <p>Location: Nairobi, Kenya</p>
+    <p>Contacts: +254-XXXXXXX | retailer4@example.com</p>
+    <p>Type of Retailer: Home Appliances</p>
+  </div>
+</div>
 
 <style>
   .retailers {

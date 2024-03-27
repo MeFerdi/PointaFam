@@ -1,135 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import logos from '../images/pngegg.png';
-import logosSmall from '../images/pngegg.png';
+import FarmerCard from '../components/FarmerCard.astro'; // Import FarmerCard component
 ---
 
-<div class="container">
+<Layout title="PointaFam - Meet Our Farmers">
+  <section class="page-content container mx-auto px-4 py-16">
+    <h1 class="text-3xl font-bold mb-8">Meet Our Dedicated Farmers</h1>
+    <p class="text-xl mb-12">
+      PointaFam connects you with passionate and sustainable farmers who are committed to providing fresh, high-quality produce. Explore the profiles below to learn more about their farms and the delicious products they offer.
+    </p>
 
-<Card dark={false}>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {farmers.map((farmer) => (
+        <FarmerCard
+          key={farmer.name} // Unique key for each card
+          name={farmer.name}
+          location={farmer.location}
+          description={farmer.description}
+          image={farmer.image}
+          website={farmer.website} // Optional website link
+        />
+      ))}
+    </div>
 
-  <h1>Welcome to the Farmers Page</h1>
-  <p>This page connects farmers producing perishable but essential products with retailers in need of these goods for resell.</p>
-  </card>
-  <!-- Farmer Registration Form -->
-  <div class="registration-form">
-    <h2>Register as a Farmer</h2>
-    <form action="/register" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-      <label for="location">Location:</label>
-      <input type="text" id="location" name="location" required>
-      <br>
-      <label for="contacts">Contacts:</label>
-      <input type="text" id="contacts" name="contacts" required>
-      <br>
-      <label for="product">Product:</label>
-      <input type="text" id="product" name="product" required>
-      <br>
-      <label for="price">Price:</label>
-      <input type="text" id="price" name="price" required>
-      <br>
-      <button type="submit">Register</button>
-    </form>
-  </div>
-  
-  <!-- Farmer Details -->
-  <div class="farmer">
-    <h2>Farmer 1</h2>
-    <p>Location: Nairobi, Kenya</p>
-    <p>Contacts: +254-XXXXXXX | farmer1@example.com</p>
-    
-    <!-- Product Listings -->
-    <h3>Product Listings</h3>
-    <ul>
-      <li>Product: Onions | Price: $10/kg</li>
-      <li>Product: Tomatoes | Price: $15/kg</li>
-      <!-- Add more product listings for Farmer 1 -->
-    </ul>
-  </div>
-  
-  <div class="farmer">
-    <h2>Farmer 2</h2>
-    <p>Location: Nakuru, Kenya</p>
-    <p>Contacts: +254-XXXXXXX | farmer2@example.com</p>
-    
-    <!-- Product Listings -->
-    <h3>Product Listings</h3>
-    <ul>
-      <li>Product: Potatoes | Price: $8/kg</li>
-      <li>Product: Carrots | Price: $12/kg</li>
-      <!-- Add more product listings for Farmer 2 -->
-    </ul>
-  </div>
-  
-  <div class="farmer">
-    <h2>Farmer 3</h2>
-    <p>Location: Eldoret, Kenya</p>
-    <p>Contacts: +254-XXXXXXX | farmer3@example.com</p>
-    
-    <!-- Product Listings -->
-    <h3>Product Listings</h3>
-    <ul>
-      <li>Product: Maize | Price: $5/kg</li>
-      <li>Product: Beans | Price: $7/kg</li>
-      <!-- Add more product listings for Farmer 3 -->
-    </ul>
-  </div>
-  
-  <div class="farmer">
-    <h2>Farmer 4</h2>
-    <p>Location: Kisumu, Kenya</p>
-    <p>Contacts: +254-XXXXXXX | farmer4@example.com</p>
-    
-    <!-- Product Listings -->
-    <h3>Product Listings</h3>
-    <ul>
-      <li>Product: Kale | Price: $3/bunch</li>
-      <li>Product: Spinach | Price: $4/bunch</li>
-      <!-- Add more product listings for Farmer 4 -->
-    </ul>
-  </div>
-</div>
-
-<style>
-  .retailers {
-    padding: 20px;
-  }
-
-  .retailers h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .retailers-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-
-  .retailer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  .retailer img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 5px;
-  }
-
-  .retailer .details {
-    margin-top: 10px;
-  }
-
-  .retailer h3 {
-    margin-bottom: 5px;
-  }
-</style>
+    <p class="text-center mt-12">
+      Interested in joining our network of farmers?
+      <a href="/become-a-farmer" class="text-green-500 underline">Learn More</a> or
+      <a href="/signup" class="text-green-500 underline font-bold">Sign Up Now</a>
+    </p>
+  </section>
+</Layout>
